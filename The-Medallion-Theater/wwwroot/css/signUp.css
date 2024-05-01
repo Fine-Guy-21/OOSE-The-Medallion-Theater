@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --main-color: #295dc5;
+    --second-main-color: #deecf0;
+    --main-bg-color: #fff;
+    --second-bg-color: #ededed;
+    --third-bg-color: #c8c9ca;
+    --main-text-color: #242A5E;
+    --second-text-color: #fff;
+    --third-text-color: #737373;
+}
+
+body {
+    background-color: #242A5E;
+    color: var(--main-text-color);
+}
+
+
+
+.sign-up-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    background-color: var(--third-bg-color);
+    height: 41px;
+    border-radius: 8px;
+    margin: 5px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+}
+
+
+
+#password, #confirm-password, #username {
+    width: 500px;
+}
+
+#fname, #lname, #address, #city, #state, #zip, #phoneNo, #email {
+    width: 245px;
+}
+
+#privacy-policy::after {
+    background-color: #000;
+}
+
+#privacy-policy {
+    width: 50px;
+    height: 17px;
+    margin-right: -0.7rem;
+    background-color: #000;
+}
+
+.privacy-policy {
+    display: flex;
+}
+
+    .privacy-policy p {
+        font-size: 0.7rem;
+    }
+
+    .privacy-policy em {
+        color: #242A5E;
+        font-size: 0.7rem;
+    }
+
+.sign-up button {
+    background-color: var(--main-color);
+    padding: 5px;
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 41px;
+    font-size: 1.3rem;
+    color: var(--second-text-color);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+    .sign-up button:hover {
+        background-color: #0256fe;
+    }
+
+h1, h2 {
+    margin: 5px;
+    color: var(--main-text-color);
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+
+    h1:hover {
+        color: var(--main-text-color);
+    }
+
+h2 {
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--main-text-color);
+}
+
+#login {
+    color: var(--third-text-color);
+    font-weight: 600;
+    margin: 1.5rem auto;
+}
+
+    #login a:hover {
+        text-decoration: underline;
+        font-weight: 800;
+    }
+
+.signUp-btn {
+    background-color: #242A5E;
+    padding: 5px;
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 41px;
+    font-size: 1.3rem;
+    color: var(--second-text-color);
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+}
+
+form {
+    border-radius: 11px;
+    width: 800px;
+    background: var(--main-bg-color);
+    margin: 40px 350px;
+    padding: 2%;
+}

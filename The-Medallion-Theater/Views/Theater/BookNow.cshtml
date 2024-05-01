@@ -1,0 +1,609 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<div class="container">
+
+    <div class="leftSide">
+        <form action="">
+            <h1>Booking Form</h1>
+            <div class="name">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname">
+
+                <br>
+                <label for="fname">Last Name</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+
+            <label for="address">Street Address</label>
+            <input type="text" class="address" name="address">
+
+            <br>
+            <div class="location">
+                <label for="city">City</label>
+                <input type="text" class="city" name="city">
+
+                <label for="state">State</label>
+                <input type="text" class="state" name="state">
+            </div>
+
+            <label for="zip">Zip</label>
+            <input type="text" class="zip" name="zip">
+
+            <div class="contact">
+                <br>
+                <label for="phoeNo">Phone Number</label>
+                <input type="number" class="phoeNo" name="phoeNo">
+
+                <br>
+                <label for="email">Eamil address</label>
+                <input type="email" class="email" name="email">
+            </div>
+
+            <br>
+            <label for="performance">Performance</label>
+            <input type="text" class="performance" name="performance">
+
+            <div class="time">
+                <br>
+                <label for="date">Date</label>
+                <input type="date" class="date" name="date">
+
+                <br>
+                <label for="time">Time</label>
+                <input type="time" class="time" name="time">
+            </div>
+
+            <br>
+            <label for="seatNo">Seats</label>
+            <input type="text" id="seatNo" class="seatNo" name="seatNo">
+            <br>
+
+            <label for="price">Total to be collected</label>
+            <input type="text" class="price" name="price">
+
+            <br />
+            <button class="bookBtn">Book</button>
+
+        </form>
+    </div>
+
+    <div class="seats">
+        <div class="seatHeader">
+            <h1>Select Your Seat</h1>
+
+            <div class="seatInfo">
+
+                <div class="booked">
+                    <div class="red"></div>
+                    <h3>Booked</h3>
+                </div>
+            </div>
+
+            <div class="stage">
+                <h1>STAGE</h1>
+            </div>
+        </div>
+
+        <div class="seat">
+
+            <div class="orchestra">
+
+                <div class="box">
+
+
+                    <div class="lefBox">
+                        <div class="s sBox b1">X1</div>
+                        <div class="s sBox b3">X3</div>
+                        <div class="s sBox b5">X5</div>
+                        <div class="s sBox b7">X7</div>
+                    </div>
+
+                    <div class="rightBox">
+                        <div class="s sBox b2">X2</div>
+                        <div class="s sBox b4">X4</div>
+                        <div class="s sBox b6">X6</div>
+                        <div class="s sBox b8">X8</div>
+                    </div>
+
+                </div>
+
+                <div class="left">
+                    <div class="col">
+                        <div class="s a1">A1</div>
+                        <div class="s b1">B1</div>
+                        <div class="s c1">C1</div>
+                        <div class="s d1">D1</div>
+                        <div class="s e1">E1</div>
+                        <div class="s f1">F1</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a2">A2</div>
+                        <div class="s b2">B2</div>
+                        <div class="s c2">C2</div>
+                        <div class="s d2">D2</div>
+                        <div class="s e2">E2</div>
+                        <div class="s f2">F2</div>
+                    </div>                        <div class="col">
+                        <div class="s a3">A3</div>
+                        <div class="s b3">B3</div>
+                        <div class="s c3">C3</div>
+                        <div class="s d3">D3</div>
+                        <div class="s e3">E3</div>
+                        <div class="s f3">F3</div>
+                    </div>                        <div class="col">
+                        <div class="s a4">A4</div>
+                        <div class="s b4">B4</div>
+                        <div class="s c4">C4</div>
+                        <div class="s d4">D4</div>
+                        <div class="s e4">E4</div>
+                        <div class="s f4">F4</div>
+                    </div>                        <div class="col">
+                        <div class="s a5">A5</div>
+                        <div class="s b5">B5</div>
+                        <div class="s c5">C5</div>
+                        <div class="s d5">D5</div>
+                        <div class="s e5">E5</div>
+                        <div class="s f5">F5</div>
+                    </div>                        <div class="col">
+                        <div class="s a6">A6</div>
+                        <div class="s b6">B6</div>
+                        <div class="s c6">C6</div>
+                        <div class="s d6">D6</div>
+                        <div class="s e6">E6</div>
+                        <div class="s f6">F6</div>
+                    </div>                        <div class="col">
+                        <div class="s a7">A7</div>
+                        <div class="s b7">B7</div>
+                        <div class="s c7">C7</div>
+                        <div class="s d7">D7</div>
+                        <div class="s e7">E7</div>
+                        <div class="s f7">F7</div>
+                    </div>                        <div class="col">
+                        <div class="s a8">A8</div>
+                        <div class="s b8">B8</div>
+                        <div class="s c8">C8</div>
+                        <div class="s d8">D8</div>
+                        <div class="s e8">E8</div>
+                        <div class="s f8">F8</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <div class="col">
+                        <div class="s a9">A9</div>
+                        <div class="s b9">B9</div>
+                        <div class="s c9">C9</div>
+                        <div class="s d9">D9</div>
+                        <div class="s e9">E9</div>
+                        <div class="s f9">F9</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a10">A10</div>
+                        <div class="s b10">B10</div>
+                        <div class="s c10">C10</div>
+                        <div class="s d10">D10</div>
+                        <div class="s e10">E10</div>
+                        <div class="s f10">F10</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a11">A11</div>
+                        <div class="s b11">B11</div>
+                        <div class="s c11">C11</div>
+                        <div class="s d11">D11</div>
+                        <div class="s e11">E11</div>
+                        <div class="s f11">F11</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a12">A12</div>
+                        <div class="s b12">B12</div>
+                        <div class="s c12">C12</div>
+                        <div class="s d12">D12</div>
+                        <div class="s e12">E12</div>
+                        <div class="s f12">F12</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a13">A13</div>
+                        <div class="s b13">B13</div>
+                        <div class="s c13">C13</div>
+                        <div class="s d13">D13</div>
+                        <div class="s e13">E13</div>
+                        <div class="s f13">F13</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a14">A14</div>
+                        <div class="s b14">B14</div>
+                        <div class="s c14">C14</div>
+                        <div class="s d14">D14</div>
+                        <div class="s e14">E14</div>
+                        <div class="s f14">F14</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a15">A15</div>
+                        <div class="s b15">B15</div>
+                        <div class="s c15">C15</div>
+                        <div class="s d15">D15</div>
+                        <div class="s e15">E15</div>
+                        <div class="s f15">F15</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a16">A16</div>
+                        <div class="s b16">B16</div>
+                        <div class="s c16">C16</div>
+                        <div class="s d16">D16</div>
+                        <div class="s e16">E16</div>
+                        <div class="s f16">F16</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a17">A17</div>
+                        <div class="s b17">B17</div>
+                        <div class="s c17">C17</div>
+                        <div class="s d17">D17</div>
+                        <div class="s e17">E17</div>
+                        <div class="s f17">F17</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a18">A18</div>
+                        <div class="s b18">B18</div>
+                        <div class="s c18">C18</div>
+                        <div class="s d18">D18</div>
+                        <div class="s e18">E18</div>
+                        <div class="s f18">F18</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a19">A19</div>
+                        <div class="s b19">B19</div>
+                        <div class="s c19">C19</div>
+                        <div class="s d19">D19</div>
+                        <div class="s e19">E19</div>
+                        <div class="s f19">F19</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a20">A20</div>
+                        <div class="s b20">B20</div>
+                        <div class="s c20">C20</div>
+                        <div class="s d20">D20</div>
+                        <div class="s e20">E20</div>
+                        <div class="s f20">F20</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a21">A21</div>
+                        <div class="s b21">B21</div>
+                        <div class="s c21">C21</div>
+                        <div class="s d21">D21</div>
+                        <div class="s e21">E21</div>
+                        <div class="s f21">F21</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a22">A22</div>
+                        <div class="s b22">B22</div>
+                        <div class="s c22">C22</div>
+                        <div class="s d22">D22</div>
+                        <div class="s e22">E22</div>
+                        <div class="s f22">F22</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a23">A23</div>
+                        <div class="s b23">B23</div>
+                        <div class="s c23">C23</div>
+                        <div class="s d23">D23</div>
+                        <div class="s e23">E23</div>
+                        <div class="s f23">F23</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a24">A24</div>
+                        <div class="s b24">B24</div>
+                        <div class="s c24">C24</div>
+                        <div class="s d24">D24</div>
+                        <div class="s e24">E24</div>
+                        <div class="s f24">F24</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="col">
+                        <div class="s a25">A25</div>
+                        <div class="s b25">B25</div>
+                        <div class="s c25">C25</div>
+                        <div class="s d25">D25</div>
+                        <div class="s e25">E25</div>
+                        <div class="s f25">F25</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a26">A26</div>
+                        <div class="s b26">B26</div>
+                        <div class="s c26">C26</div>
+                        <div class="s d26">D26</div>
+                        <div class="s e26">E26</div>
+                        <div class="s f26">F26</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a27">A27</div>
+                        <div class="s b27">B27</div>
+                        <div class="s c27">C27</div>
+                        <div class="s d27">D27</div>
+                        <div class="s e27">E27</div>
+                        <div class="s f27">F27</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a28">A28</div>
+                        <div class="s b28">B28</div>
+                        <div class="s c28">C28</div>
+                        <div class="s d28">D28</div>
+                        <div class="s e28">E28</div>
+                        <div class="s f28">F28</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a29">A29</div>
+                        <div class="s b29">B29</div>
+                        <div class="s c29">C29</div>
+                        <div class="s d29">D29</div>
+                        <div class="s e29">E29</div>
+                        <div class="s f29">F29</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a30">A30</div>
+                        <div class="s b30">B30</div>
+                        <div class="s c30">C30</div>
+                        <div class="s d30">D30</div>
+                        <div class="s e30">E30</div>
+                        <div class="s f30">F30</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a31">A31</div>
+                        <div class="s b31">B31</div>
+                        <div class="s c31">C31</div>
+                        <div class="s d31">D31</div>
+                        <div class="s e31">E31</div>
+                        <div class="s f31">F31</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s a32">A32</div>
+                        <div class="s b32">B32</div>
+                        <div class="s c32">C32</div>
+                        <div class="s d32">D32</div>
+                        <div class="s e32">E32</div>
+                        <div class="s f32">F32</div>
+                    </div>
+                </div>
+
+                <div class="box lBox">
+
+                    <div class="lefBox">
+                        <div class="s sBox b9">X9</div>
+                        <div class="s sBox b11">X11</div>
+                        <div class="s sBox b13">X13</div>
+                        <div class="s sBox b15">X15</div>
+                    </div>
+
+                    <div class="rightBox">
+                        <div class="s sBox b10">X10</div>
+                        <div class="s sBox b12">X12</div>
+                        <div class="s sBox b14">X14</div>
+                        <div class="s sBox b16">X16</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="mezzanine">
+                <div class="left">
+                    <div class="col">
+
+                        <div class="s g1">G1</div>
+                        <div class="s h1">H1</div>
+                        <div class="s i1">I1</div>
+                        <div class="s j1">J1</div>
+                        <div class="s k1">K1</div>
+                        <div class="s l1">L1</div>
+                        <div class="s m1">M1</div>
+                        <div class="s n1">N1</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g2">G2</div>
+                        <div class="s h2">H2</div>
+                        <div class="s i2">I2</div>
+                        <div class="s j2">J2</div>
+                        <div class="s k2">K2</div>
+                        <div class="s l2">L2</div>
+                        <div class="s m2">M2</div>
+                        <div class="s n2">N2</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g3">G3</div>
+                        <div class="s h3">H3</div>
+                        <div class="s i3">I3</div>
+                        <div class="s j3">J3</div>
+                        <div class="s k3">K3</div>
+                        <div class="s l3">L3</div>
+                        <div class="s m3">M3</div>
+                        <div class="s n3">N3</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g4">G4</div>
+                        <div class="s h4">H4</div>
+                        <div class="s i4">I4</div>
+                        <div class="s j4">J4</div>
+                        <div class="s k4">K4</div>
+                        <div class="s l4">L4</div>
+                        <div class="s m4">M4</div>
+                        <div class="s n4">N4</div>
+                    </div>
+                    <div class="col">
+                        <div class="s g5">G5</div>
+                        <div class="s h5">H5</div>
+                        <div class="s i5">I5</div>
+                        <div class="s j5">J5</div>
+                        <div class="s k5">K5</div>
+                        <div class="s l5">L5</div>
+                        <div class="s m5">M5</div>
+                        <div class="s n5">N5</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g6">G6</div>
+                        <div class="s h6">H6</div>
+                        <div class="s i6">I6</div>
+                        <div class="s j6">J6</div>
+                        <div class="s k6">K6</div>
+                        <div class="s l6">L6</div>
+                        <div class="s m6">M6</div>
+                        <div class="s n6">N6</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g7">G7</div>
+                        <div class="s h7">H7</div>
+                        <div class="s i7">I7</div>
+                        <div class="s j7">J7</div>
+                        <div class="s k7">K7</div>
+                        <div class="s l7">L7</div>
+                        <div class="s m7">M7</div>
+                        <div class="s n7">N7</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s g8">G8</div>
+                        <div class="s h8">H8</div>
+                        <div class="s i8">I8</div>
+                        <div class="s j8">J8</div>
+                        <div class="s k8">K8</div>
+                        <div class="s l8">L8</div>
+                        <div class="s m8">M8</div>
+                        <div class="s n8">N8</div>
+                    </div>
+
+                    <div class="col">
+                        <div class="s letters">G</div>
+                        <div class="s letters">H</div>
+                        <div class="s letters">I</div>
+                        <div class="s letters">J</div>
+                        <div class="s letters">K</div>
+                        <div class="s letters">L</div>
+                        <div class="s letters">M</div>
+                        <div class="s letters">N</div>
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <div class="col"> <div class="s g9">G9</div> <div class="s h9">H9</div> <div class="s i9">I9</div> <div class="s j9">J9</div> <div class="s k9">K9</div> <div class="s l9">L9</div> <div class="s m9">M9</div> <div class="s n9">N9</div> </div> <div class="col"> <div class="s g10">G10</div> <div class="s h10">H10</div> <div class="s i10">I10</div> <div class="s j10">J10</div> <div class="s k10">K10</div> <div class="s l10">L10</div> <div class="s m10">M10</div> <div class="s n10">N10</div> </div> <div class="col"> <div class="s g11">G11</div> <div class="s h11">H11</div> <div class="s i11">I11</div> <div class="s j11">J11</div> <div class="s k11">K11</div> <div class="s l11">L11</div> <div class="s m11">M11</div> <div class="s n11">N11</div> </div> <div class="col"> <div class="s g12">G12</div> <div class="s h12">H12</div> <div class="s i12">I12</div> <div class="s j12">J12</div> <div class="s k12">K12</div> <div class="s l12">L12</div> <div class="s m12">M12</div> <div class="s n12">N12</div> </div> <div class="col"> <div class="s g13">G13</div> <div class="s h13">H13</div> <div class="s i13">I13</div> <div class="s j13">J13</div> <div class="s k13">K13</div> <div class="s l13">L13</div> <div class="s m13">M13</div> <div class="s n13">N13</div> </div> <div class="col"> <div class="s g14">G14</div> <div class="s h14">H14</div> <div class="s i14">I14</div> <div class="s j14">J14</div> <div class="s k14">K14</div> <div class="s l14">L14</div> <div class="s m14">M14</div> <div class="s n14">N14</div> </div> <div class="col"> <div class="s g15">G15</div> <div class="s h15">H15</div> <div class="s i15">I15</div> <div class="s j15">J15</div> <div class="s k15">K15</div> <div class="s l15">L15</div> <div class="s m15">M15</div> <div class="s n15">N15</div> </div> <div class="col"> <div class="s g16">G16</div> <div class="s h16">H16</div> <div class="s i16">I16</div> <div class="s j16">J16</div> <div class="s k16">K16</div> <div class="s l16">L16</div> <div class="s m16">M16</div> <div class="s n16">N16</div> </div> <div class="col"> <div class="s g17">G17</div> <div class="s h17">H17</div> <div class="s i17">I17</div> <div class="s j17">J17</div> <div class="s k17">K17</div> <div class="s l17">L17</div> <div class="s m17">M17</div> <div class="s n17">N17</div> </div> <div class="col"> <div class="s g18">G18</div> <div class="s h18">H18</div> <div class="s i18">I18</div> <div class="s j18">J18</div> <div class="s k18">K18</div> <div class="s l18">L18</div> <div class="s m18">M18</div> <div class="s n18">N18</div> </div> <div class="col"> <div class="s g19">G19</div> <div class="s h19">H19</div> <div class="s i19">I19</div> <div class="s j19">J19</div> <div class="s k19">K19</div> <div class="s l19">L19</div> <div class="s m19">M19</div> <div class="s n19">N19</div> </div> <div class="col"> <div class="s g20">G20</div> <div class="s h20">H20</div> <div class="s i20">I20</div> <div class="s j20">J20</div> <div class="s k20">K20</div> <div class="s l20">L20</div> <div class="s m20">M20</div> <div class="s n20">N20</div> </div> <div class="col"> <div class="s g21">G21</div> <div class="s h21">H21</div> <div class="s i21">I21</div> <div class="s j21">J21</div> <div class="s k21">K21</div> <div class="s l21">L21</div> <div class="s m21">M21</div> <div class="s n21">N21</div> </div> <div class="col"> <div class="s g22">G22</div> <div class="s h22">H22</div> <div class="s i22">I22</div> <div class="s j22">J22</div> <div class="s k22">K22</div> <div class="s l22">L22</div> <div class="s m22">M22</div> <div class="s n22">N22</div> </div> <div class="col"> <div class="s g23">G23</div> <div class="s h23">H23</div> <div class="s i23">I23</div> <div class="s j23">J23</div> <div class="s k23">K23</div> <div class="s l23">L23</div> <div class="s m23">M23</div> <div class="s n23">N23</div> </div> <div class="col"> <div class="s g24">G24</div> <div class="s h24">H24</div> <div class="s i24">I24</div> <div class="s j24">J24</div> <div class="s k24">K24</div> <div class="s l24">L24</div> <div class="s m24">M24</div> <div class="s n24">N24</div> </div>
+
+                    <div class="col">
+                        <div class="s letters">G</div>
+                        <div class="s letters">H</div>
+                        <div class="s letters">I</div>
+                        <div class="s letters">J</div>
+                        <div class="s letters">K</div>
+                        <div class="s letters">L</div>
+                        <div class="s letters">M</div>
+                        <div class="s letters">N</div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="col"> <div class="s g25">G25</div> <div class="s h25">H25</div> <div class="s i25">I25</div> <div class="s j25">J25</div> <div class="s k25">K25</div> <div class="s l25">L25</div> <div class="s m25">M25</div> <div class="s n25">N25</div> </div> <div class="col"> <div class="s g26">G26</div> <div class="s h26">H26</div> <div class="s i26">I26</div> <div class="s j26">J26</div> <div class="s k26">K26</div> <div class="s l26">L26</div> <div class="s m26">M26</div> <div class="s n26">N26</div> </div> <div class="col"> <div class="s g27">G27</div> <div class="s h27">H27</div> <div class="s i27">I27</div> <div class="s j27">J27</div> <div class="s k27">K27</div> <div class="s l27">L27</div> <div class="s m27">M27</div> <div class="s n27">N27</div> </div> <div class="col"> <div class="s g28">G28</div> <div class="s h28">H28</div> <div class="s i28">I28</div> <div class="s j28">J28</div> <div class="s k28">K28</div> <div class="s l28">L28</div> <div class="s m28">M28</div> <div class="s n28">N28</div> </div> <div class="col"> <div class="s g29">G29</div> <div class="s h29">H29</div> <div class="s i29">I29</div> <div class="s j29">J29</div> <div class="s k29">K29</div> <div class="s l29">L29</div> <div class="s m29">M29</div> <div class="s n29">N29</div> </div> <div class="col"> <div class="s g30">G30</div> <div class="s h30">H30</div> <div class="s i30">I30</div> <div class="s j30">J30</div> <div class="s k30">K30</div> <div class="s l30">L30</div> <div class="s m30">M30</div> <div class="s n30">N30</div> </div> <div class="col"> <div class="s g31">G31</div> <div class="s h31">H31</div> <div class="s i31">I31</div> <div class="s j31">J31</div> <div class="s k31">K31</div> <div class="s l31">L31</div> <div class="s m31">M31</div> <div class="s n31">N31</div> </div> <div class="col"> <div class="s g32">G32</div> <div class="s h32">H32</div> <div class="s i32">I32</div> <div class="s j32">J32</div> <div class="s k32">K32</div> <div class="s l32">L32</div> <div class="s m32">M32</div> <div class="s n32">N32</div> </div>
+                </div>
+
+
+            </div>
+
+            <div class="balcony">
+                <div class="left">
+                    <div class="col"> <div class="s aa1">AA1</div> <div class="s bb1">BB1</div> <div class="s cc1">CC1</div> </div> <div class="col"> <div class="s aa2">AA2</div> <div class="s bb2">BB2</div> <div class="s cc2">CC2</div> <div class="s dd2">DD2</div> </div> <div class="col"> <div class="s aa3">AA3</div> <div class="s bb3">BB3</div> <div class="s cc3">CC3</div> <div class="s dd3">DD3</div> </div> <div class="col"> <div class="s aa4">AA4</div> <div class="s bb4">BB4</div> <div class="s cc4">CC4</div> <div class="s dd4">DD4</div> <div class="s ee4">EE4</div> <div class="s ff4">FF4</div> </div> <div class="col"> <div class="s aa5">AA5</div> <div class="s bb5">BB5</div> <div class="s cc5">CC5</div> <div class="s dd5">DD5</div> <div class="s ee5">EE5</div> <div class="s ff5">FF5</div> </div> <div class="col"> <div class="s aa6">AA6</div> <div class="s bb6">BB6</div> <div class="s cc6">CC6</div> <div class="s dd6">DD6</div> <div class="s ee6">EE6</div> <div class="s ff6">FF6</div> </div> <div class="col"> <div class="s aa7">AA7</div> <div class="s bb7">BB7</div> <div class="s cc7">CC7</div> <div class="s dd7">DD7</div> <div class="s ee7">EE7</div> <div class="s ff7">FF7</div> </div> <div class="col"> <div class="s aa8">AA8</div> <div class="s bb8">BB8</div> <div class="s cc8">CC8</div> <div class="s dd8">DD8</div> <div class="s ee8">EE8</div> <div class="s ff8">FF8</div> </div>
+
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <div class="col"> <div class="s aa9">AA9</div> <div class="s bb9">BB9</div> <div class="s cc9">CC9</div> <div class="s dd9">DD9</div> <div class="s ee9">EE9</div> <div class="s ff9">FF9</div> </div> <div class="col"> <div class="s aa10">AA10</div> <div class="s bb10">BB10</div> <div class="s cc10">CC10</div> <div class="s dd10">DD10</div> <div class="s ee10">EE10</div> <div class="s ff10">FF10</div> </div> <div class="col"> <div class="s aa11">AA11</div> <div class="s bb11">BB11</div> <div class="s cc11">CC11</div> <div class="s dd11">DD11</div> <div class="s ee11">EE11</div> <div class="s ff11">FF11</div> </div> <div class="col"> <div class="s aa12">AA12</div> <div class="s bb12">BB12</div> <div class="s cc12">CC12</div> <div class="s dd12">DD12</div> <div class="s ee12">EE12</div> <div class="s ff12">FF12</div> </div> <div class="col"> <div class="s aa13">AA13</div> <div class="s bb13">BB13</div> <div class="s cc13">CC13</div> <div class="s dd13">DD13</div> <div class="s ee13">EE13</div> <div class="s ff13">FF13</div> </div> <div class="col"> <div class="s aa14">AA14</div> <div class="s bb14">BB14</div> <div class="s cc14">CC14</div> <div class="s dd14">DD14</div> <div class="s ee14">EE14</div> <div class="s ff14">FF14</div> </div> <div class="col"> <div class="s aa15">AA15</div> <div class="s bb15">BB15</div> <div class="s cc15">CC15</div> <div class="s dd15">DD15</div> <div class="s ee15">EE15</div> <div class="s ff15">FF15</div> </div> <div class="col"> <div class="s aa16">AA16</div> <div class="s bb16">BB16</div> <div class="s cc16">CC16</div> <div class="s dd16">DD16</div> <div class="s ee16">EE16</div> <div class="s ff16">FF16</div> </div> <div class="col"> <div class="s aa17">AA17</div> <div class="s bb17">BB17</div> <div class="s cc17">CC17</div> <div class="s dd17">DD17</div> <div class="s ee17">EE17</div> <div class="s ff17">FF17</div> </div> <div class="col"> <div class="s aa18">AA18</div> <div class="s bb18">BB18</div> <div class="s cc18">CC18</div> <div class="s dd18">DD18</div> <div class="s ee18">EE18</div> <div class="s ff18">FF18</div> </div> <div class="col"> <div class="s aa19">AA19</div> <div class="s bb19">BB19</div> <div class="s cc19">CC19</div> <div class="s dd19">DD19</div> <div class="s ee19">EE19</div> <div class="s ff19">FF19</div> </div> <div class="col"> <div class="s aa20">AA20</div> <div class="s bb20">BB20</div> <div class="s cc20">CC20</div> <div class="s dd20">DD20</div> <div class="s ee20">EE20</div> <div class="s ff20">FF20</div> </div> <div class="col"> <div class="s aa21">AA21</div> <div class="s bb21">BB21</div> <div class="s cc21">CC21</div> <div class="s dd21">DD21</div> <div class="s ee21">EE21</div> <div class="s ff21">FF21</div> </div> <div class="col"> <div class="s aa22">AA22</div> <div class="s bb22">BB22</div> <div class="s cc22">CC22</div> <div class="s dd22">DD22</div> <div class="s ee22">EE22</div> <div class="s ff22">FF22</div> </div> <div class="col"> <div class="s aa23">AA23</div> <div class="s bb23">BB23</div> <div class="s cc23">CC23</div> <div class="s dd23">DD23</div> <div class="s ee23">EE23</div> <div class="s ff23">FF23</div> </div> <div class="col"> <div class="s aa24">AA24</div> <div class="s bb24">BB24</div> <div class="s cc24">CC24</div> <div class="s dd24">DD24</div> <div class="s ee24">EE24</div> <div class="s ff24">FF24</div> </div>
+
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                    <div class="col">
+                        <div class="s letters">A</div>
+                        <div class="s letters">B</div>
+                        <div class="s letters">C</div>
+                        <div class="s letters">D</div>
+                        <div class="s letters">E</div>
+                        <div class="s letters">F</div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="col"> <div class="s aa25">AA25</div> <div class="s bb25">BB25</div> <div class="s cc25">CC25</div> <div class="s dd25">DD25</div> <div class="s ee25">EE25</div> <div class="s ff25">FF25</div> </div> <div class="col"> <div class="s aa26">AA26</div> <div class="s bb26">BB26</div> <div class="s cc26">CC26</div> <div class="s dd26">DD26</div> <div class="s ee26">EE26</div> <div class="s ff26">FF26</div> </div> <div class="col"> <div class="s aa27">AA27</div> <div class="s bb27">BB27</div> <div class="s cc27">CC27</div> <div class="s dd27">DD27</div> <div class="s ee27">EE27</div> <div class="s ff27">FF27</div> </div> <div class="col"> <div class="s aa28">AA28</div> <div class="s bb28">BB28</div> <div class="s cc28">CC28</div> <div class="s dd28">DD28</div> <div class="s ee28">EE28</div> <div class="s ff28">FF28</div> </div> <div class="col"> <div class="s aa29">AA29</div> <div class="s bb29">BB29</div> <div class="s cc29">CC29</div> <div class="s dd29">DD29</div> <div class="s ee29">EE29</div> <div class="s ff29">FF29</div> </div> <div class="col"> <div class="s aa30">AA30</div> <div class="s bb30">BB30</div> <div class="s cc30">CC30</div> <div class="s dd30">DD30</div> </div> <div class="col"> <div class="s aa31">AA31</div> <div class="s bb31">BB31</div> <div class="s cc31">CC31</div> <div class="s dd31">DD31</div> </div> <div class="col"> <div class="s aa32">AA32</div> <div class="s bb32">BB32</div> <div class="s cc32">CC32</div> </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+/** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  :root {
+    --main-color: #295dc5;
+    --second-main-color: #deecf0;
+  
+    --main-bg-color: #fff;
+    --second-bg-color: #ededed;
+    --third-bg-color: #c8c9ca;
+  
+    --main-text-color: #000;
+    --second-text-color: #fff;
+    --third-text-color: #737373;
+  }
+  
+  body {
+    background-color: #242A5E;
+    color: var(--main-text-color);
+  }
+  
+input {
+    background-color: var(--third-bg-color);
+    height: 41px;
+    border-radius: 8px;
+    
+    margin: 5px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  
+    font-size: 1rem;
+    border: 1px solid #ccc;
+  } 
+
+
+  #email, #password {
+    width: 500px;
+  }
+
+  p {
+    color: #242A5E;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+    color: #242A5E;
+    text-align: center;
+
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+  
+
+  
+  #login {
+    color: var(--third-text-color);
+    font-weight: 600;
+  
+    margin: 1.5rem auto;
+  }
+  
+  #login a:hover {
+    text-decoration: underline;
+    font-weight: 800;
+  }
+   
+  .login-btn {
+    background-color: #242A5E;
+    padding: 5px;
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 41px;
+    font-size: 1.3rem;
+    color: var(--second-text-color);
+  
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 15px;
+  }
+
+  form {
+    border-radius: 11px;
+    width: 700px;
+    height: 430px;
+    background: var(--main-bg-color);
+
+    margin: 150px 450px;
+    padding: 2%;
+
+    text-align: center;
+  }
+
+  .form-check {
+    display: flex;
+    justify-content: end;
+    padding-right: 11%;
+    margin-top: -15px;
+  }
+
+  .form-check label {
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  .forgotPswd {
+    position: absolute;
+    margin-bottom: 15px;
+  }
+
+*/  

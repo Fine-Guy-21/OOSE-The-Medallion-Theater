@@ -1,0 +1,68 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model PatronVm;
+
+@{
+    ViewData["Title"] = "MT : Sign Up";
+    Layout = "_Layout2";
+}
+
+
+<div class="container" id="container">
+
+
+    <form class="sign-up-form" asp-action="signUp" method="post" >
+        <h1>Sign Up</h1>
+        <h2>Sign up to see your favourite Performance</h2>
+
+        <div class="name">
+
+            <input type="text" id="fname" placeholder="First Name" asp-for="FirstName" >
+
+            <input type="text" id="lname" placeholder="Last Name" asp-for="LastName" >
+
+        </div>  <!-- name end-->
+
+        <div class="location">
+            <input type="text" id="address" placeholder="Street Address" asp-for="StreetAddress">
+
+            <input type="text" id="city" placeholder="City" asp-for="City">
+        </div>
+
+        <div class="location">
+
+            <input type="text" id="state" placeholder="State" asp-for="State">
+
+            <input type="text" id="zip" placeholder="Zip" asp-for="ZipCode">
+        </div> <!-- Location end -->
+
+        <div class="contact">
+            <input type="text" id="phoneNo" placeholder="Phone Number" asp-for="Phone">
+
+            <input type="email" id="email" placeholder="Email" asp-for="Email">
+        </div>
+
+
+        <div id="pswd" class="passwords">
+            <input type="password" id="password" class="visibility" placeholder="Password" asp-for="Password">
+        </div>
+
+        <div id="confirm-pswd" class="passwords">
+            <input type="password" id="confirm-password" class="visibility" placeholder="Confirm Password" asp-for="Password">
+        </div>
+
+
+        <div class="privacy-policy">
+            <input type="checkbox" name="privacy-policy" id="privacy-policy">
+            <p>Yes, i understand and agree to the <em>Theather Terms or Service</em>, including the <em>user Agreement<br> and Privacy Policy</em></p>
+        </div>
+        
+        <button type="submit" class="signUp-btn" >Sign Up</button>
+
+        <p>Already have an account? <a asp-action="Loginurl" asp-controller="Account">Login</a> </p>
+
+        <div style="color=red;" asp-validation-summary="All"></div>
+        
+    </form> <!-- sign up form end-->
+
+</div> <!-- container end-->

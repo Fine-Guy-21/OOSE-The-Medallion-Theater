@@ -8,6 +8,7 @@
 
 
 /* for multiple seats selection */
+
 $(document).ready(function () {
   var selectedSeats = [];
 // to calculate total price 
@@ -43,7 +44,7 @@ $(document).ready(function () {
 // to show a seat is available or not 
 $(document).ready(function () {
 
-  $(".s").click(function () {
+  $(".s").click(function () { 
     var seattxt = $(this).text();
     var seat = $(this);
     var firstLetter = seattxt.charAt(0)    

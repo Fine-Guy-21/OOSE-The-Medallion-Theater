@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TxSWFudTyJQD92CxmQFaGmbVKmUzqYtBY7muKSlFMt0=",
+  "Hash": "SfwPdrNKOyNUVvU/4I1a9LSz65ffGLKpqXXnZhjPbPI=",
   "Source": "The-Medallion-Theater",
   "BasePath": "_content/The-Medallion-Theater",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\The-Medallion-Theater.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\Index.css",
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\Book.css",
       "SourceId": "The-Medallion-Theater",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
       "BasePath": "_content/The-Medallion-Theater",
-      "RelativePath": "css/Index.css",
+      "RelativePath": "css/Book.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Index.css"
+      "OriginalItemSpec": "wwwroot\\css\\Book.css"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\login.css",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\signUp.css",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "css/signUp.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\signUp.css"
     },
     {
       "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\site.css",
@@ -102,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\Index.js",
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\Book.js",
       "SourceId": "The-Medallion-Theater",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
       "BasePath": "_content/The-Medallion-Theater",
-      "RelativePath": "js/Index.js",
+      "RelativePath": "js/Book.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,7 +150,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Index.js"
+      "OriginalItemSpec": "wwwroot\\js\\Book.js"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\login.js",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\signUp.js",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "js/signUp.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signUp.js"
     },
     {
       "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\site.js",

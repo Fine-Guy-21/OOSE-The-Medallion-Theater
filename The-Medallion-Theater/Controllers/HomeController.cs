@@ -12,13 +12,13 @@ namespace The_Medallion_Theater.Controllers
         {
             _logger = logger;
         }
-
-        public IActionResult Index()
+        
+        public IActionResult BookNow()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Book()
         {
             return View();
         }

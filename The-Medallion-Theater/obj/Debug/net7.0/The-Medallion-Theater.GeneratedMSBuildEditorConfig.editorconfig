@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\21fin\Desktop\Workspace\GH\OOSE-The-Medallion-Theater\The-Medallion-Theater
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Account/Loginurl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbnVybC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Account/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Shared/Error.cshtml]
@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Theater/BookNow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlYXRlclxCb29rTm93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/_ViewImports.cshtml]
@@ -43,3 +47,11 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-iu6rpv5otn
+
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-0o2bd5yaes
+
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Shared/_Layout3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-669ewb3s47
