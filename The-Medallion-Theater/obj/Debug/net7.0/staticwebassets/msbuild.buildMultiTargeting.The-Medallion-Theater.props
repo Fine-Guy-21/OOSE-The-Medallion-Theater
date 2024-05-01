@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\The-Medallion-Theater.props" />
+</Project>

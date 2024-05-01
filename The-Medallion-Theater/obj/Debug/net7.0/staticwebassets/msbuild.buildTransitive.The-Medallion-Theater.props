@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\The-Medallion-Theater.props" />
+</Project>
