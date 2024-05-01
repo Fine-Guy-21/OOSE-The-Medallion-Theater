@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: linear-gradient(rgba(29, 47, 49, 0.385), rgb(10, 73, 78));
+    --second-bg-color: #272c35;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+   color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+ .container {
+    display: flex;
+    height: 100vh;
+ }
+
+ .leftSide {
+    height: 100vh;
+    width: 450px;
+    margin-right: 5px;
+    background-color: #242A5E;
+ }
+
+
+.seats {
+    width: 1080px;
+    height: 100vh;
+    BACKGROUND-COLOR: #051440;
+
+    padding: 8px;
+ }
+
+.seatHeader {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    padding-top: 10px;
+}
+
+.seat {
+    border-radius: 5%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    background: linear-gradient(to right, #242A5E, #02022b);
+    
+    padding-top: 10px;
+    padding: 5px;
+}
+
+.seatInfo {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    height: 15px;
+    background-color: red;
+    border-radius: 35%;
+    width: 25px;
+}
+
+.green {
+    height: 15px;
+    background-color: green;
+    border-radius: 35%;
+    width: 25px;
+}
+
+.orchestra, .mezzanine, .balcony {
+    height: 215px;
+    width: 1060px;
+
+    margin-bottom: 5px;
+    background-color: #242A5E;
+
+    border-radius: 5%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+
+    padding: 8px;
+
+    display: flex;
+    justify-content: space-between  ;
+}
+
+.orchestra, .balcony {
+    height: 170px;
+}
+
+.s {
+    height: 14px;
+    width: 17px;
+    cursor: pointer;
+
+    color: black;
+
+    margin-bottom: 11px;
+    margin-right: 5px;
+    text-align: center;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.balcony .s {
+    font-size: 0.65rem;
+}
+
+.middle, .right, .left {
+    display: flex;
+    width: 320px;
+}
+
+.name, .location, .contact, .time {
+    display: flex;
+}
+
+input {
+    width: 101px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    font-size: 1.2rem;
+    font-weight: 200;
+
+    margin-right: 15px;
+}
+
+label {
+    margin-right: 5px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+form {
+    padding: 4%;
+}
+
+form h1 {
+    margin-bottom: 25px;
+    margin-left: 115px;
+    font-weight: 700;
+}
+
+.bookBtn {
+    border-radius: 11px;
+    padding: 1% 5%;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin-left: 170px;
+    margin-top: 15px;
+}
+
+#fname {
+    margin-right: 60px;
+}
+
+
+.address {
+    width: 305px;
+}
+
+.city, .date {
+    margin-right: 40px;
+    width: 190px;
+}
+
+.zip {
+    width: 193px;
+}
+
+.performance {
+    width: 310px;
+}
+
+.seatsNo {
+    margin-bottom: 45px;
+}
+
+.orchestra .col .letters, .balcony .col .letters, .mezzanine .col .letters {
+    background-color: #242A5E;
+    color: white;
+    cursor: auto;
+}
+
+.or {
+    position: absolute;
+    top: 280px;
+    right: 18px;
+    font-weight: 600;
+}
+
+.mz {
+    position: absolute;
+    top: 420px;
+    right: 25px;
+    font-weight: 600;
+}
+
+.ba {
+    position: absolute;
+    top: 620px;
+    right: 45px;
+    font-weight: 600;
+}
+
+.stage {
+    position: absolute;
+    width: 885px;
+    height: 55px;
+    text-align: center;
+    background-color: #242A5E;
+
+    top: 80px;
+    right: 165px;
+
+    transform: skewX(-25deg);
+}
+
+.stage h1 {
+    margin-top: 6px;
+}
+
+/* Update */
+
+.box {
+    display: flex;
+    margin-right: 15px;
+}
+
+.box h2 {
+    margin-right: 5px;
+}   
+
+.rightBox {
+    margin-top: 13px;
+    margin-left: 2%;
+}
+
+.orchestra .box .sBox {
+    background-color: #FFE699;
+}
+
+.mezzanine .s {
+    background-color: #FBE5D6;
+}
+
+.orchestra .s {
+    background-color: #DEEBF7;
+}
+
+.balcony .s {
+    background-color: #CCFFCC;
+}
+
+.orchestra .middle {
+    margin-right: 70px;
+}
+
+.mezzanine .middle {
+    margin-right: 75px;
+}
+
+.mezzanine .right {
+    margin-right: 98px;
+}
+
+.mezzanine .left {
+    margin-left: 94px;
+}
+
+.balcony .left {
+    margin-left: 94px;
+}
+
+.balcony .middle {
+    position: relative;
+    right: 88px;
+}
+
+.balcony .right {
+    position: relative;
+    right: 14px;
+}
+
+

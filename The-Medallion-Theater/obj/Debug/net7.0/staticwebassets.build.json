@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qBqzUzpGdvYeDuMAhN+8CJx0mRU2V6h2SV8n+5FtIg4=",
+  "Hash": "TxSWFudTyJQD92CxmQFaGmbVKmUzqYtBY7muKSlFMt0=",
   "Source": "The-Medallion-Theater",
   "BasePath": "_content/The-Medallion-Theater",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\The-Medallion-Theater.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\Index.css",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "css/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
+    },
+    {
       "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\site.css",
       "SourceId": "The-Medallion-Theater",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\Index.js",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "js/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Index.js"
     },
     {
       "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\js\\site.js",
