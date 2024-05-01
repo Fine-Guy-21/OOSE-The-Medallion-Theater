@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using The_Medallion_Theater.Models;
 
@@ -10,6 +12,8 @@ namespace The_Medallion_Theater.Controllers
         {
             return View();
         }
+
+        [Authorize]
         [HttpGet]
         public IActionResult BookNow()
         {

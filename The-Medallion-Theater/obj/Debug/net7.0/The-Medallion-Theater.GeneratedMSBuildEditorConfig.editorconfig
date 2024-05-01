@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\21fin\Desktop\Workspace\GH\OOSE-The-Medallion-Theater\The-Medallion-Theater
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/21fin/Desktop/Workspace/GH/OOSE-The-Medallion-Theater/The-Medallion-Theater/Views/Account/Loginurl.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbnVybC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

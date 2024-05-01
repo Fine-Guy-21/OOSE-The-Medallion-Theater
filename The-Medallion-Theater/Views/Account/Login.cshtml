@@ -1,0 +1,43 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model LoginVM;
+
+@{
+    ViewData["Title"] = "MT : Log In";
+    Layout = "_Layout3";
+}
+
+
+
+<div class="container" id="container">
+
+
+    <form class="log-in-form" asp-action="Loginurl" method="post">
+
+        <h1>Hello,Again</h1>
+        <p>We are happy to have you back.</p>
+
+        <input type="email" id="email" name="email" placeholder="Email" asp-for="Email">
+        <input hidden class="form-control" asp-for="Returnurl" id="floatingInput" value="@Model.Returnurl" />
+        
+
+        <div id="pswd" class="passwords">
+            <input type="password" id="password" class="visibility" name="password" placeholder="Password" asp-for="Password">
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="formCheck">
+            <label for="formCheck">Remember Me</label>
+        </div>
+
+        <a href="#" class="forgotPswd">Forgot Password?</a>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <p>Don't have account? <a asp-controller="Account" asp-action="Signup">Sign Up</a> </p>
+
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+    </form> <!-- login form end-->
+
+</div> <!-- container end-->

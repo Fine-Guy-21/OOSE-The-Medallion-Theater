@@ -16,7 +16,7 @@ namespace The_Medallion_Theater.Controllers
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
-
+/*Sign up*/
         [HttpGet]
         public IActionResult Signup() => View();
 
@@ -57,6 +57,46 @@ namespace The_Medallion_Theater.Controllers
             return View(pvm);
         }
 
+/*Login with Url */
+
+        [HttpGet]
+        public IActionResult Login(string returnUrl)
+        {
+            LoginVM li = new LoginVM();
+            li.Returnurl = returnUrl;   
+            return View(li);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginVM li)
+        {
+            if (ModelState.IsValid)
+            {
+                Patron? patron= await userManager.FindByEmailAsync(li.Email);
+                if (patron != null)
+                {
+                    await signInManager.SignOutAsync();
+                    Microsoft.AspNetCore.Identity.SignInResult result = await signInManager
+                        .PasswordSignInAsync(patron, li.Password, false, false);
+
+                    if (result.Succeeded)
+                    {
+                        if (li.Returnurl != null)
+                        {
+                            return Redirect(li.Returnurl ?? "/");
+                        }
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(nameof(li.Email), "Login Failed: Invalid Email or Password Combination");
+                    RedirectToAction("Login");
+                }
+            }
+            return View(li);
+        }
+
+/*Login without Url*/
         [HttpGet]
         public IActionResult Loginurl()
         {
@@ -64,7 +104,6 @@ namespace The_Medallion_Theater.Controllers
             li.Returnurl = "none";
             return View();
         }
-
         [HttpPost]
         public async Task<IActionResult> Loginurl(LoginVM li)
         {
@@ -100,6 +139,14 @@ namespace The_Medallion_Theater.Controllers
 
             return View(li);
         }
+
+/*Log out*/
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
 
 
 
