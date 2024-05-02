@@ -1,0 +1,33 @@
+﻿@model List<Production> ;
+@{
+    ViewData["Title"] = "MT : Browse Productions";
+    Layout = "_Layout";
+}
+
+
+<div class="pl-performance-list">
+    <h1 class="pl-title">Productions</h1>
+    <div class="pl-scrollable">
+        <ul class="pl-list">
+            @foreach (var production in @Model){
+                <li class="pl-item">
+                    <div class="pl-performance">
+                        <h2 class="pl-performance-title">Production Name : @production.ProductionName </h2>
+                        <p class="pl-performance-info">Production Id : @production.ProductionId  </p>
+                        <p class="pl-performance-info">Production Type : @production.ProductionType </p>
+                        <div class="pl-buttons">
+                            <button class="pl-book-now"> 
+                                <a asp-action="DeleteProduction" asp-route-id="@production.ProductionId" > Delete Production </a> 
+                                </button>
+                            <button class="pl-special-btn">
+                                <a asp-action="EditProduction" asp-route-id="@production.ProductionId" >Edit Production </a>
+                                </button> <!-- New button -->
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+

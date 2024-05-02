@@ -1,0 +1,42 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model ProductionVm;
+@{
+    ViewData["Title"] = "MT : Edit production";
+    Layout = "_Layout";
+
+}
+
+<form action="Editproduction" method="Post">
+
+    <h1>Edit Production Form</h1>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Production Id : <i>@Model.ProductionId</i> </label>
+        <input type="hidden" class="form-control" value="@Model.ProductionId" asp-for="ProductionId" >
+    </div>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Production Name</label>
+        <input type="text"class="form-control" asp-for="ProductionName" value="@Model.ProductionName" >
+    </div>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Production type</label>
+        <select class="form-control" asp-for="ProductionType" >
+            <option value="concert" selected> Concert</option>
+            <option value="play"> Play</option>
+        </select>
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+
+    <button class="bookBtn">Edit Production</button>
+    <button class="bookBtn">Delete Production </button>
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+</form>
+

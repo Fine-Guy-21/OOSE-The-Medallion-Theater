@@ -1,0 +1,37 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model Production;
+@{
+    ViewData["Title"] = "MT : Add Production"; 
+    Layout = "_Layout";
+
+}
+
+<form action="Addproduction" method="Post">
+
+    <h1>Add Production Form</h1>
+    
+    <div class="ap-div-group">
+        <label class="ap-label">Production Name</label>
+        <input type="text" class="form-control" asp-for="ProductionName">
+    </div>
+
+    <div class="ap-div-group">
+        <label  class="ap-label" >Production type</label>
+        <select class="form-control" asp-for="ProductionType">
+            <option value="concert" selected> Concert</option>
+            <option value="play"> Play</option>
+        </select>
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+
+    <button class="bookBtn">Add Production</button>
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+</form>
+
+        

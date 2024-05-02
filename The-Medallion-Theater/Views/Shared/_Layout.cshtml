@@ -9,6 +9,7 @@
     <title>@ViewData["Title"] - The_Medallion_Theater</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Book.css" />
+    <link rel="stylesheet" href="~/css/browse.css"/>
     <link rel="stylesheet" href="~/The_Medallion_Theater.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -50,7 +51,7 @@
         @if (signInManager.IsSignedIn(User))
         {
             <button><a class="logout-button" asp-controller="Account" asp-action="Logout">@User.Identity.Name </a></button>
-
+            
         }
         else
         {

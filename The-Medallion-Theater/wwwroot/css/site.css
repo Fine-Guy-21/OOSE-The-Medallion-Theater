@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color:#242A5E;
 }
 
 header {
@@ -116,4 +117,52 @@ nav ul li a:hover {
     color: #f2f2f2;
 }
 
+select.form-control {
+    width: 100%;
+    height: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
+select.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.ap-label {
+    font-size:20px;
+    
+}
+
+.ap-div-group{
+    margin:15px;
+}
+
+input.form-control {
+    width: 80%;
+    height: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}

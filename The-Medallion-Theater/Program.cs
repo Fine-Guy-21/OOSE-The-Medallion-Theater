@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using The_Medallion_Theater.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 var ConnString = builder.Configuration.GetConnectionString("MySQlConn");
 
-
+builder.Services.AddScoped<IManageRepository, ManageRepository>(); 
 builder.Services.AddDbContext<MyDbContext>(options =>
 {
     options.UseMySql(ConnString, ServerVersion.AutoDetect(ConnString));
@@ -23,7 +24,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -35,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Theater}/{action=Browse}/{id?}");
 
 app.Run();
