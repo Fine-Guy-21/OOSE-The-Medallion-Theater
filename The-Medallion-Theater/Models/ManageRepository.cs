@@ -44,6 +44,36 @@
         }
 
 
+        public List<Performance> GetPerformances() => myDbContext.Performances.ToList();
+
+        public Performance GetPerformanceByID(string id)
+        {
+            Performance pr = myDbContext.Performances.Where(o => o.PerformanceID== id).FirstOrDefault();
+            return pr;
+        }
+        
+        public Performance SavePerformance(Performance performance)
+        {
+            myDbContext.Performances.Add(performance);
+            myDbContext.SaveChanges();
+            return performance;
+        }
+
+        public Performance UpdatePerformance (Performance performance)
+        {
+            myDbContext.Performances.Update(performance);
+            myDbContext.SaveChanges();
+            return performance;
+        }        
+
+        public void DeletePerformance(Performance performance)
+        {
+            myDbContext.Performances.Remove(performance);
+            myDbContext.SaveChanges();
+        }
+        
+
+
 
 
     }

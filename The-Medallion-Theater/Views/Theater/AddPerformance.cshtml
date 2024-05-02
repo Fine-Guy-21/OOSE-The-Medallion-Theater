@@ -1,0 +1,50 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model PerformanceVm
+@{
+    ViewData["Title"] = "MT : Add Performance";
+    Layout = "_Layout";
+
+}
+
+<form action="Addperformance" method="Post">
+
+    <h1>Add Performance Form</h1>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Performance Name</label>
+        <input type="text" class="form-control" asp-for="PerformanceName">
+    </div>
+
+    <div class="ap-div-group">  
+        <label class="ap-label">Production type</label>
+        <select class="form-control" asp-for="ProductionName">
+            @foreach (var pr in Model.prods)
+            {
+                <option value="@pr.ProductionName"> @pr.ProductionName </option>
+            }
+        </select>
+    </div>
+    
+    <div class="ap-div-group">
+        <label class="ap-label">Performance Date</label>
+        <input type="date" class="form-control" asp-for="PerformanceDate">
+    </div>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Production type</label>
+        <select class="form-control" asp-for="PTime">
+            <option value="afternoon" selected> Afternoon </option>
+            <option value="manitee"> Manitee </option>
+        </select>
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+
+    <button class="bookBtn">Add Performance</button>
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+</form>

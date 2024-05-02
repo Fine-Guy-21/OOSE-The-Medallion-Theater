@@ -94,12 +94,101 @@ namespace The_Medallion_Theater.Controllers
 
         }
 
+/*Add Performance*/
+
+        [HttpGet]
+        public IActionResult AddPerformance()
+        {
+            List<Production> prs = ManageRepository.GetProductions();
+            PerformanceVm Prds = new PerformanceVm()
+            {
+                prods = prs
+            };
+                
+            
+         return View(Prds);
+        }
+
+        [HttpPost]
+        public IActionResult AddPerformance(PerformanceVm pvm) {
+
+            pvm.PerformanceID = Guid.NewGuid().ToString();
+
+            if (ModelState.IsValid)
+            {
+                Performance pr = new Performance()
+                {
+                    PerformanceID = pvm.PerformanceID,
+                    PerformanceName = pvm.PerformanceName,
+                    ProductionName = pvm.ProductionName,
+                    PerformanceDate = pvm.PerformanceDate,
+                    PTime = pvm.PTime
+                };
+
+                ManageRepository.SavePerformance(pr);
+                return RedirectToAction("BrowsePerformance");
+            }
+            return View(pvm);
+        
+        }
 
 
+/*Edit */
 
+        [HttpGet]
+        public IActionResult EditPerformance(string id)
+        {
+            List<Performance> prds = ManageRepository.GetPerformances();
+            Performance prs = ManageRepository.GetPerformanceByID(id);
+            PerformanceVm pvm = new PerformanceVm()
+            {
+                PerformanceID = prs.PerformanceID,
+                PerformanceName = prs.PerformanceName,
+                ProductionName = prs.ProductionName,
+                PerformanceDate = prs.PerformanceDate,
+                PTime = prs.PTime
+            };
 
+            ViewData["Prs"] = prds; 
+            return View(pvm);
 
+        }
+        [HttpPost]
+        public IActionResult EditPerformance(PerformanceVm pvm)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                Performance pr = new Performance()
+                {
+                    PerformanceID = pvm.PerformanceID,
+                    PerformanceName = pvm.PerformanceName,
+                    ProductionName = pvm.ProductionName,
+                    PerformanceDate = pvm.PerformanceDate,
+                    PTime = pvm.PTime
+                };
 
+                ManageRepository.UpdatePerformance(pr);
+                return RedirectToAction("BrowsePerformance");
+                
+            }            
+            ;
+            return View();
+
+        }
+
+/* delete performance */
+
+        public IActionResult DeletePerformance(string id)
+        {
+            Performance pr = ManageRepository.GetPerformanceByID(id);
+            if (pr != null)
+            {
+                ManageRepository.DeletePerformance(pr);
+            }
+            return RedirectToAction("BrowsePerformance");
+
+        }
 
 
         [Authorize]

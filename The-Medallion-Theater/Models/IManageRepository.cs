@@ -10,6 +10,14 @@ namespace The_Medallion_Theater.Models
         public Production UpdateProduction(Production production); 
         public void DeleteProdution(Production production);
 
+        public List<Performance> GetPerformances();
+        public Performance GetPerformanceByID(string id);
+        public Performance SavePerformance(Performance performance);
+        public Performance UpdatePerformance(Performance performance);
+        public void DeletePerformance(Performance performance);
+
+
+
 
     }
 }
