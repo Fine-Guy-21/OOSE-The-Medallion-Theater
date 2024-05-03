@@ -20,7 +20,7 @@ namespace The_Medallion_Theater.Controllers
 
         public IActionResult BrowsePerformance()
         {
-            return View();
+            return View(ManageRepository.GetPerformances());
         }
 
         public IActionResult BrowseProduction()
@@ -100,23 +100,22 @@ namespace The_Medallion_Theater.Controllers
         public IActionResult AddPerformance()
         {
             List<Production> prs = ManageRepository.GetProductions();
+            ViewBag.productions = prs;
             PerformanceVm Prds = new PerformanceVm()
             {
                 prods = prs
             };
-                
-            
-         return View(Prds);
+
+
+            return View(Prds);
         }
 
         [HttpPost]
         public IActionResult AddPerformance(PerformanceVm pvm) {
 
             pvm.PerformanceID = Guid.NewGuid().ToString();
-
-            if (ModelState.IsValid)
-            {
-                Performance pr = new Performance()
+            
+            Performance pr = new Performance()
                 {
                     PerformanceID = pvm.PerformanceID,
                     PerformanceName = pvm.PerformanceName,
@@ -127,9 +126,7 @@ namespace The_Medallion_Theater.Controllers
 
                 ManageRepository.SavePerformance(pr);
                 return RedirectToAction("BrowsePerformance");
-            }
-            return View(pvm);
-        
+            
         }
 
 

@@ -16,7 +16,7 @@ namespace The_Medallion_Theater.Models
 
     public enum PerformanceTime
     {
-        mantinee,
-        evening
+        matinee,
+        afternoon
     }
 }
