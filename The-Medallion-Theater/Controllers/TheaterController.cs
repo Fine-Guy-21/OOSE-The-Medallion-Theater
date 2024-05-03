@@ -22,6 +22,10 @@ namespace The_Medallion_Theater.Controllers
         {
             return View(ManageRepository.GetPerformances());
         }
+        public IActionResult aBrowsePerformance()
+        {
+            return View(ManageRepository.GetPerformances());
+        }
 
         public IActionResult BrowseProduction()
         {
@@ -103,6 +107,7 @@ namespace The_Medallion_Theater.Controllers
             ViewBag.productions = prs;
             PerformanceVm Prds = new PerformanceVm()
             {
+                PerformanceDate = DateTime.Now,
                 prods = prs
             };
 
@@ -130,12 +135,13 @@ namespace The_Medallion_Theater.Controllers
         }
 
 
-/*Edit */
+/*Edit Performance */
 
         [HttpGet]
         public IActionResult EditPerformance(string id)
         {
-            List<Performance> prds = ManageRepository.GetPerformances();
+            List<Production> prds = ManageRepository.GetProductions();
+            
             Performance prs = ManageRepository.GetPerformanceByID(id);
             PerformanceVm pvm = new PerformanceVm()
             {
@@ -143,19 +149,17 @@ namespace The_Medallion_Theater.Controllers
                 PerformanceName = prs.PerformanceName,
                 ProductionName = prs.ProductionName,
                 PerformanceDate = prs.PerformanceDate,
-                PTime = prs.PTime
+                PTime = prs.PTime,
+                prods = prds
             };
-
-            ViewData["Prs"] = prds; 
-            return View(pvm);
+                return View(pvm);
 
         }
         [HttpPost]
         public IActionResult EditPerformance(PerformanceVm pvm)
         {
             
-            if (ModelState.IsValid)
-            {
+            
                 Performance pr = new Performance()
                 {
                     PerformanceID = pvm.PerformanceID,
@@ -166,36 +170,43 @@ namespace The_Medallion_Theater.Controllers
                 };
 
                 ManageRepository.UpdatePerformance(pr);
-                return RedirectToAction("BrowsePerformance");
-                
-            }            
-            ;
-            return View();
-
+                return RedirectToAction("aBrowsePerformance");
+                          
         }
 
 /* delete performance */
 
         public IActionResult DeletePerformance(string id)
         {
-            Performance pr = ManageRepository.GetPerformanceByID(id);
-            if (pr != null)
+            Performance performance = ManageRepository.GetPerformanceByID(id);
+            if (performance != null)
             {
-                ManageRepository.DeletePerformance(pr);
-            }
-            return RedirectToAction("BrowsePerformance");
+                ManageRepository.DeletePerformance(performance);
+            }            
+            return RedirectToAction("aBrowsePerformance");
 
         }
 
 
         [Authorize]
         [HttpGet]
-        public IActionResult BookNow()
+        public IActionResult BookNow(string id)
         {
-            return View();
+            string PatronId = userManager.FindByNameAsync(User.Identity.Name).Result.Id;
+            Patron pa = ManageRepository.GetUserById(PatronId);
+            Performance pe= ManageRepository.GetPerformanceByID(id);
+            BookingVm bvm = new BookingVm()
+            {
+                patron = pa,
+                performance = pe                
+            };
+
+
+
+            return View(bvm);
         }
         [HttpPost]
-        public IActionResult BookNow(Ticket ticket)
+        public IActionResult BookNow(BookingVm bvm)
         {
             return View();
         }

@@ -12,7 +12,7 @@
             this.myDbContext = myDbContext;
         }
 
-
+        public Patron GetUserById(string id) => myDbContext.Patrons.Where(p => p.Id == id).FirstOrDefault();
         public List<Production> GetProductions()=> myDbContext.Productions.ToList();
         
         public Production GetProductionByID(string id)

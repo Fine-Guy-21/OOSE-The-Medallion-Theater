@@ -4,6 +4,7 @@ namespace The_Medallion_Theater.Models
 {
     public interface IManageRepository
     {
+        public Patron GetUserById(string id); 
         public List<Production> GetProductions(); 
         public Production GetProductionByID(string id);
         public Production SaveProduction(Production production);

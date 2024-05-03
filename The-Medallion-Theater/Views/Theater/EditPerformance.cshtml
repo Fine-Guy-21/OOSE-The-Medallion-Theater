@@ -1,27 +1,30 @@
 ﻿@using The_Medallion_Theater.Models;
 
-@model PerformanceVm;
+@model PerformanceVm
 @{
     ViewData["Title"] = "MT : Edit Performance";
-    List<Production> prs = ViewData["Prs"] as List<Production>;
-
     Layout = "_Layout";
 
 }
 
 <form action="EditPerformance" method="Post">
 
-    <h1>EDit Performance Form</h1>
+    <h1>Edit Performance Form</h1>
+
+    <div class="ap-div-group">
+        <label class="ap-label">Performance id </label>
+        <input type="text" readonly="readonly" class="form-control" asp-for="PerformanceID" value="@Model.PerformanceID">
+    </div>
 
     <div class="ap-div-group">
         <label class="ap-label">Performance Name</label>
-        <input type="text" class="form-control" asp-for="PerformanceName" >
+        <input type="text" class="form-control" asp-for="PerformanceName" value="@Model.PerformanceName" >
     </div>
 
     <div class="ap-div-group">
         <label class="ap-label">Production type</label>
-        <select class="form-control" asp-for="ProductionName">
-            @foreach (var pr in prs)
+        <select class="form-control" asp-for="ProductionName" value="@Model.ProductionName">
+            @foreach (var pr in Model.prods)
             {
                 <option value="@pr.ProductionName"> @pr.ProductionName </option>
             }
@@ -30,23 +33,21 @@
 
     <div class="ap-div-group">
         <label class="ap-label">Performance Date</label>
-        <input type="datetime" class="form-control" asp-for="PerformanceDate">
+        <input type="datetime-local" class="form-control" asp-for="PerformanceDate" value="@Model.PerformanceDate.ToString("yyyy-MM-ddTHH:mm")">        
     </div>
 
     <div class="ap-div-group">
         <label class="ap-label">Production type</label>
         <select class="form-control" asp-for="PTime">
-            <option value="afternoon" selected> Afternoon </option>
+            <option value="afternoon"> Afternoon </option>
             <option value="manitee"> Manitee </option>
         </select>
     </div>
 
-
-    <br />
-    <br />
     <br />
 
-    <button class="bookBtn">Edit Performance</button>
-    <div class="text-danger" asp-validation-summary="All"></div>
+    <button class="bookBtn" type="submit"> Edit Performance </button>
+
+
 
 </form>

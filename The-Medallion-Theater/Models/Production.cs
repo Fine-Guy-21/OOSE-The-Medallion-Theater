@@ -4,7 +4,7 @@
     {
         public string? ProductionId { get; set; }
         public string? ProductionName { get; set; }
-        public string? ProductionType { get; set; }
+        public string? ProductionType { get; set; }        
     }
 
     public enum ProductionType

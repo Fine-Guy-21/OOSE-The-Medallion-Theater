@@ -13,7 +13,7 @@
         <ul class="pl-list">
             @foreach (var pr in @Model){
             <li class="pl-item">
-                <div class="pl-performance">
+                    <div class="pl-performance">                        
                     <h2 class="pl-performance-title"> @pr.PerformanceName </h2>
                     <p class="pl-performance-info">Production: @pr.ProductionName </p>
                         <p class="pl-performance-info">Date: @pr.PerformanceDate.Date.ToShortDateString()</p>
@@ -23,10 +23,13 @@
                     }
                     <p class="pl-performance-info">Time: @timeText</p>
                     <div class="pl-buttons">
-                        <button class="pl-book-now">
-                                <a asp-action="BookNow" asp_route_id="@pr.PerformanceID">Book Now </a>
+                            <button class="pl-book-now">
+                                <a asp-action="DeletePerformance" asp-route-id="@pr.PerformanceID"> Delete</a>
                             </button>
-                    </div>
+                            <button class="pl-special-btn">
+                                <a asp-action="EditPerformance" asp-route-id="@pr.PerformanceID">Edit</a>
+                                </button>
+                        </div>
                 </div>
             </li>
             }

@@ -79,3 +79,12 @@
     flex-direction: column;
     align-items: flex-end;
 }
+a:visited{
+    color: #242A5E;
+}
+a:active {
+    color: #242A5E;
+}
+a {
+    color: #242A5E;
+}
