@@ -200,8 +200,7 @@ namespace The_Medallion_Theater.Controllers
                 patron = pa,
                 performance = pe                
             };
-
-
+                        
 
             return View(bvm);
         }

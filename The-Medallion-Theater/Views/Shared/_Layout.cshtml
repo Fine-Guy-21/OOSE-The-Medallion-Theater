@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/browse.css"/>
     <link rel="stylesheet" href="~/css/index.css" />
     <link rel="stylesheet" href="~/The_Medallion_Theater.styles.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 @*     <header>
@@ -71,10 +72,11 @@
         </main>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/Book.js" asp-append-version="true"></script>
 
-
     @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
 </html>

@@ -1,4 +1,8 @@
-﻿@{
+﻿@using The_Medallion_Theater.Models;
+
+@model BookingVm
+
+@{
     ViewData["Title"] = "MT : Book";
     Layout = "_Layout";
 }
@@ -6,63 +10,71 @@
 <div class="container">
 
     <div class="leftSide">
-        <form action="">
+        <form action="BookNow" method="post">
             <h1>Booking Form</h1>
             <div class="name">
                 <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname">
+                <input type="text" id="fname"  asp-for="@Model.patron.FirstName" value="@Model.patron.FirstName">
 
                 <br>
                 <label for="fname">Last Name</label>
-                <input type="text" name="lname" id="lname">
+                <input type="text"  id="lname" asp-for="@Model.patron.LastName" value="@Model.patron.LastName">
             </div>
 
             <label for="address">Street Address</label>
-            <input type="text" class="address" name="address">
+            <input type="text" class="address"  asp-for="@Model.patron.StreetAddress" value="@Model.patron.StreetAddress">
 
             <br>
             <div class="location">
                 <label for="city">City</label>
-                <input type="text" class="city" name="city">
-
+                <input type="text" class="city"  asp-for="@Model.patron.City" value="@Model.patron.City">
+                
                 <label for="state">State</label>
-                <input type="text" class="state" name="state">
+                <input type="text" class="state"  asp-for="@Model.patron.State" value="@Model.patron.State">
             </div>
 
             <label for="zip">Zip</label>
-            <input type="text" class="zip" name="zip">
+            <input type="text" class="zip"  name="zip" asp-for="@Model.patron.ZipCode" value="@Model.patron.ZipCode">
 
             <div class="contact">
                 <br>
                 <label for="phoeNo">Phone Number</label>
-                <input type="number" class="phoeNo" name="phoeNo">
+                <input type="number" class="phoeNo" asp-for="@Model.patron.PhoneNumber" value="@Model.patron.PhoneNumber">
 
                 <br>
-                <label for="email">Eamil address</label>
-                <input type="email" class="email" name="email">
+                <label for="email">Email address</label>
+                <input type="email" class="email" asp-for="@Model.patron.Email" value="@Model.patron.Email">
             </div>
 
             <br>
+            
             <label for="performance">Performance</label>
-            <input type="text" class="performance" name="performance">
+            <input type="text" class="performance" hidden="hidden" asp-for="@Model.performance.PerformanceName" value="@Model.performance.PerformanceName">
+            <input type="text" class="performance" readonly="readonly" asp-for="@Model.performance.PerformanceName" value="@Model.performance.PerformanceName">
 
             <div class="time">
                 <br>
                 <label for="date">Date</label>
-                <input type="date" class="date" name="date">
-
+                <input type="text" class="date" readonly="readonly" 
+                    asp-for="@Model.performance.PerformanceDate"                        
+                       value="@Model.performance.PerformanceDate.Date.ToShortDateString()">
+                       
                 <br>
                 <label for="time">Time</label>
-                <input type="time" class="time" name="time">
+                <input type="text" class="time" readonly="readonly"
+                    @{
+                    string timeText = Enum.GetName(typeof(PerformanceTime), @Model.performance.PTime).ToString();
+                    }    
+                    value="@timeText">
             </div>
 
             <br>
             <label for="seatNo">Seats</label>
-            <input type="text" id="seatNo" class="seatNo" name="seatNo">
+            <input type="text" id="seatNo" class="seatNo" readonly="readonly">
             <br>
 
             <label for="price">Total to be collected</label>
-            <input type="text" class="price" name="price">
+            <input type="text" class="price" readonly="readonly" asp-for="@Model.TotalPrice" value="0">
 
             <br />
             <button class="bookBtn">Book</button>
@@ -606,4 +618,6 @@
 
         </div>
     </div>
+
 </div>
+
