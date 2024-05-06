@@ -52,14 +52,14 @@
 
         @if (signInManager.IsSignedIn(User))
         {
-            <button><a class="logout-button" asp-controller="Account" asp-action="Logout">@User.Identity.Name </a></button>
+            <button class="logout-button"> <a asp-controller="Account" asp-action="Logout">@User.Identity.Name </a></button>
             
         }
         else
         {
             <div class="auth-buttons">
-                <button class="login-button" asp-controller="Account" asp-action="Loginurl" >Login</button>
-                <button class="register-button" asp-controller="Account" asp-action="Signup" >Register</button>
+                <button class="login-button"><a asp-controller="Account" asp-action="Loginurl">Login </a> </button>
+                <button class="register-button"> <a asp-controller="Account" asp-action="Signup">Register </a> </button>
             </div>
         }
 

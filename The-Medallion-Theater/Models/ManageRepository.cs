@@ -72,8 +72,19 @@
             myDbContext.SaveChanges();
         }
         
+        public Ticket GenerateTicket(Ticket ticket)
+        {
+            myDbContext.Tickets.Add(ticket);
+            myDbContext.SaveChanges();
+            return ticket;
+        }
 
-
+        public List<Ticket> ShowMyTickets(string id)
+        {
+           List<Ticket> tickets = myDbContext.Tickets.Where(t => t.PatronID == id).ToList();
+            
+            return tickets;
+        }
 
 
     }

@@ -84,9 +84,10 @@ nav ul li a:hover {
 }
 .register-button {
     border-radius: 11px;
+    border :1px solid #242A5E;
     margin-left: 370px;
     margin-top: 15px;
-    background-color: #242A5E;
+    background-color: #f2f2f2;
     color: #f2f2f2;    
 }
 
@@ -101,9 +102,9 @@ nav ul li a:hover {
 }
 
 .logout-button:hover {
-    background-color: #242A5E;
-     text-decoration: underline;
-    color: #f2f2f2;
+    background-color: #f2f2f2;
+    text-decoration: underline;
+    color: #242A5E;
 }
 
 
@@ -113,8 +114,9 @@ nav ul li a:hover {
 }
 
 .register-button:hover {
-    text-decoration:underline;
-    color: #f2f2f2;
+    color: #f2f2f2; 
+    text-decoration: underline;
+       
 }
 
 select.form-control {

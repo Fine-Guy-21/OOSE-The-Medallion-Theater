@@ -5,12 +5,7 @@
     ViewData["Title"] = "MT : Add Performance";
     Layout = "_Layout";
 
-    List<Production> prds = new List<Production>
-    {
-        new Production { ProductionId = "1", ProductionName = "Product 1", ProductionType = "Type 1" },
-        new Production { ProductionId = "2", ProductionName = "Product 2", ProductionType = "Type 2" },
-        new Production { ProductionId = "3", ProductionName = "Product 3", ProductionType = "Type 3" }
-    };
+
 
 }
 
@@ -36,7 +31,6 @@
     <div class="ap-div-group">
         <label class="ap-label">Performance Date</label>
         <input type="datetime-local" class="form-control" asp-for="PerformanceDate">
-        <input type="hidden" asp-for="prods" value="@prds">
     </div>
 
     <div class="ap-div-group">
@@ -51,7 +45,6 @@
     <br />
 
     <button class="bookBtn" type="submit"> > Add Performance </button>
-    <div class="text-danger" asp-validation-summary="All"></div>
     
 
 

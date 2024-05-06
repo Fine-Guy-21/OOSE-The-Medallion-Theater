@@ -197,8 +197,20 @@ namespace The_Medallion_Theater.Controllers
             Performance pe= ManageRepository.GetPerformanceByID(id);
             BookingVm bvm = new BookingVm()
             {
-                patron = pa,
-                performance = pe                
+                FirstName = pa.FirstName,
+                LastName = pa.LastName,
+                StreetAddress = pa.StreetAddress,
+                City = pa.City,
+                State = pa.State,
+                ZipCode = pa.ZipCode,
+                PhoneNumber = pa.PhoneNumber,
+                Email = pa.Email,
+                PerformanceID = pe.PerformanceID,
+                PerformanceName = pe.PerformanceName,
+                PerformanceDate = pe.PerformanceDate,
+                PerformanceTime = pe.PTime.ToString(),
+                ReservedSeats = pe.ReservedSeats,
+                TotalPrice = 0
             };
                         
 
@@ -207,13 +219,32 @@ namespace The_Medallion_Theater.Controllers
         [HttpPost]
         public IActionResult BookNow(BookingVm bvm)
         {
-            return View();
+            Performance pe = ManageRepository.GetPerformanceByID(bvm.PerformanceID);
+            pe.ReservedSeats = bvm.ReservedSeats + ", " + bvm.Seats;
+            ManageRepository.UpdatePerformance(pe);
+
+            Ticket t = new Ticket()
+            {
+                TicketID = Guid.NewGuid().ToString(),
+
+                FullName = bvm.FirstName + "_" + bvm.LastName,
+                PerformanceName = bvm.PerformanceName,
+                Seats = bvm.Seats,
+                TotalPrice = bvm.TotalPrice
+            };
+            ManageRepository.GenerateTicket(t); 
+
+            return RedirectToAction("BrowseProduction");
         }
 
-        public IActionResult GenerateTicket(Ticket ticket)
+        public IActionResult ShowMyTickets()
         {
-            return View();
+            string PatronId = userManager.FindByNameAsync(User.Identity.Name).Result.Id;
+            Patron pa = ManageRepository.GetUserById(PatronId);
+            return View(ManageRepository.ShowMyTickets(pa.Id));
         }
+
+
 
     }
 }

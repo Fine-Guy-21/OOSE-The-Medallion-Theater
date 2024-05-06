@@ -9,7 +9,7 @@ namespace The_Medallion_Theater.Models
         public string? ProductionName {  get; set; }
         public DateTime PerformanceDate {  get; set; }
         public PerformanceTime PTime { get; set; }
-        List<string>? ReservedSeats { get; set; }
+        public string? ReservedSeats { get; set; }
     }
 
 

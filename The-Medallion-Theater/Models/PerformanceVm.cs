@@ -7,7 +7,9 @@
         public string? ProductionName { get; set; }
         public DateTime PerformanceDate { get; set; }
         public PerformanceTime PTime { get; set; }
-        public List<Production> prods { get; set; }
-        
+        public List<Production>? prods { get; set; }
+        public List<string>? Seats { get; set; }
+
+
     }
 }

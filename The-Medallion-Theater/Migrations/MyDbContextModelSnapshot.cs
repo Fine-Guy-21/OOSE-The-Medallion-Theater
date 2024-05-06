@@ -249,6 +249,9 @@ namespace The_Medallion_Theater.Migrations
                     b.Property<string>("ProductionName")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("ReservedSeats")
+                        .HasColumnType("longtext");
+
                     b.HasKey("PerformanceID");
 
                     b.ToTable("Performances");
@@ -279,13 +282,19 @@ namespace The_Medallion_Theater.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("PatronID")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("PerformanceName")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TotalPrice")
+                    b.Property<string>("Seats")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("double");
 
                     b.HasKey("TicketID");
 

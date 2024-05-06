@@ -17,8 +17,9 @@ namespace The_Medallion_Theater.Models
         public Performance UpdatePerformance(Performance performance);
         public void DeletePerformance(Performance performance);
 
-
-
+        public Ticket GenerateTicket(Ticket ticket);
+        public List<Ticket> ShowMyTickets(string id);
+        
 
     }
 }

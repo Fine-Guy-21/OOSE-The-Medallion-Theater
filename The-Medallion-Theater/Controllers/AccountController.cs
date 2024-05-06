@@ -119,7 +119,7 @@ namespace The_Medallion_Theater.Controllers
                     if (result.Succeeded)
                     {
 
-                        return RedirectToAction("BookNow", "Theater");
+                        return RedirectToAction("BrowsePerformance", "Theater");
                     }
                     else
                     {
