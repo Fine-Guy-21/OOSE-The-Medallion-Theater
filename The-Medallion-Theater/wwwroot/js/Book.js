@@ -89,31 +89,6 @@ $(document).ready(function () {
 
 });
 
-
-$(document).ready(function () {
-    var seats = $('#fortheseats').val();    
-    console.log(seats);
-    var soldseats = seats.split(',').map(function (seat) {
-        return seat.trim();
-    });
-    var totalrevenue = 0;
-    if (seats.trim() !== '') {
-        soldseats.forEach(function (seat) {
-            var price = GetPrice(seat);
-            totalrevenue += price;
-        });
-    }
-    $('#noborderdisplay').val(seats.trim() === '' ? 0 : totalrevenue);
-    console.log($('#noborderdisplay').val());
-});
-
-$(document).ready(function () {
-    $('.chiild').each(function () {
-        var parentBackgroundColor = $(this).parent('.parrent').css('background-color');
-        $(this).css('background-color', parentBackgroundColor);
-        });
-});
-
 function GetPrice(seat_text) {
     var firstLetter = seat_text.charAt(0);
 

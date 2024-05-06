@@ -38,13 +38,11 @@
                     <td> @t.ProductionName</td>
                     <td> @t.PerformanceDate.ToShortDateString()</td>
                     <td> @t.PerformanceTime</td>
-                    <td>@t.SeatsSold
-                        <input type="text" hidden="hidden" id="fortheseats" asp-for="@t.ReservedSeat" value="@t.ReservedSeat">
-                    </td>
+                    <td>@t.SeatsSold </td>
                     @{
                         totalRev = totalRev + t.TotalRevenue;
                     }
-                    <td class="parrent"><input type="text" class="chiild" id="noborderdisplay"> </td>
+                    <td class="parrent"> @t.TotalRevenue $ </td>
                 </tr>
             }
             <tr>
@@ -54,7 +52,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Total :  </td>
+                <td>Total : @totalRev $ </td>
 
             </tr>
 
