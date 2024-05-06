@@ -223,20 +223,24 @@ namespace The_Medallion_Theater.Controllers
             pe.ReservedSeats = bvm.ReservedSeats + ", " + bvm.Seats;
             ManageRepository.UpdatePerformance(pe);
 
+            string PatronId = userManager.FindByNameAsync(User.Identity.Name).Result.Id;
+            Patron pa = ManageRepository.GetUserById(PatronId);
+            
             Ticket t = new Ticket()
             {
                 TicketID = Guid.NewGuid().ToString(),
-
-                FullName = bvm.FirstName + "_" + bvm.LastName,
+                FullName = pa.UserName,
+                PatronID = pa.Id,                
                 PerformanceName = bvm.PerformanceName,
                 Seats = bvm.Seats,
+                PurchaseDate = DateTime.Now,
                 TotalPrice = bvm.TotalPrice
             };
             ManageRepository.GenerateTicket(t); 
 
-            return RedirectToAction("BrowseProduction");
+            return RedirectToAction("BrowsePerformance");
         }
-
+        [Authorize]
         public IActionResult ShowMyTickets()
         {
             string PatronId = userManager.FindByNameAsync(User.Identity.Name).Result.Id;

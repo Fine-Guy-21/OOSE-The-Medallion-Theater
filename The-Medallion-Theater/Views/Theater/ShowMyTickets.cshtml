@@ -1,1 +1,70 @@
-﻿
+﻿@using The_Medallion_Theater.Models;
+
+@model List<Ticket>;
+
+@{
+    ViewData["Title"] = "MT : MyTickets";
+
+    var index = 0;
+}
+
+@* <div class="pl-performance-table">
+    <h1 class="pl-title">Purchased Tickets</h1>
+    <div class="pl-scrollable">
+        <table class="pl-table">
+            <tr>
+                <th></th>
+                <th>Performance Name</th>
+                <th>Reserved Seats</th>
+                <th>Purchase Date</th>
+                <th>Total Price</th>
+                
+            </tr>
+            @foreach (var t in @Model)
+            {
+                <tr>
+                    @{index = index + 1;}
+                    <td> @index</td>
+                    <td>@t.PerformanceName</td>
+                    <td> @t.Seats</td>
+                    <td>@t.PurchaseDate.Date.ToShortDateString()</td>
+                    <td>@t.TotalPrice</td>
+                </tr>
+
+            }
+            
+        </table>
+    </div>
+ </div>*@
+
+<div id="table-wrapper">
+    <h1 class="pl-title"><u>Purchased Tickets</u></h1>
+    <div id="scrollable-div">
+        <table id="custom-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Performance Name</th>
+                    <th>Seats</th>
+                    <th>Purchase Date</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+                @foreach (var t in @Model)
+                {
+                    <tr>
+                        @{
+                            index = index + 1;
+                        }
+                        <td> @index</td>
+                        <td>@t.PerformanceName</td>
+                        <td> @t.Seats</td>
+                        <td>@t.PurchaseDate.Date.ToShortDateString()</td>
+                        <td>@t.TotalPrice</td>
+                    </tr>
+                }
+            
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿#table-wrapper {
+    max-width: 100vw;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 30px;
+    margin-top: 70px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+#scrollable-div {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+
+#custom-table {
+    color: #242A5E;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+
+    #custom-table th,
+    #custom-table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #custom-table th {
+        background-color: #242A5E;
+        color: #f2f2f2;
+    }
+
+    #custom-table tbody tr:nth-child(odd) {
+        background-color: #97a4dd;
+    }
+    #custom-table tbody tr:nth-child(even) {
+        border:1px solid #97a4dd;
+    }
+

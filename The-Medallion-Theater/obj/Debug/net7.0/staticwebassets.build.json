@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OQ6FgveLUTxtDHD8WPsPcrslpoITnWxPAEWElTtTkMk=",
+  "Hash": "ka3nZ/D8WLhGMSWCk+2L0QMDyLZlAQ6LKoZZJa7mBA0=",
   "Source": "The-Medallion-Theater",
   "BasePath": "_content/The-Medallion-Theater",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\css\\ticket.css",
+      "SourceId": "The-Medallion-Theater",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\",
+      "BasePath": "_content/The-Medallion-Theater",
+      "RelativePath": "css/ticket.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ticket.css"
     },
     {
       "Identity": "C:\\Users\\21fin\\Desktop\\Workspace\\GH\\OOSE-The-Medallion-Theater\\The-Medallion-Theater\\wwwroot\\favicon.ico",
