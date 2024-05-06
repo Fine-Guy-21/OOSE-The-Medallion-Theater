@@ -221,7 +221,14 @@ namespace The_Medallion_Theater.Controllers
         public IActionResult BookNow(BookingVm bvm)
         {
             Performance pe = ManageRepository.GetPerformanceByID(bvm.PerformanceID);
-            pe.ReservedSeats = bvm.Seats + ", " + bvm.ReservedSeats;
+            if(pe.ReservedSeats==null)
+            {
+                pe.ReservedSeats = bvm.Seats;
+            }
+            else
+            {
+                pe.ReservedSeats = bvm.Seats + ", " + bvm.ReservedSeats;                
+            }
             pe.TotalRevenue = bvm.TotalPrice + pe.TotalRevenue;
             ManageRepository.UpdatePerformance(pe);
 
