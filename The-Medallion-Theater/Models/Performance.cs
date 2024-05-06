@@ -10,6 +10,7 @@ namespace The_Medallion_Theater.Models
         public DateTime PerformanceDate {  get; set; }
         public PerformanceTime PTime { get; set; }
         public string? ReservedSeats { get; set; }
+        public double TotalRevenue { get; set; }
     }
 
 

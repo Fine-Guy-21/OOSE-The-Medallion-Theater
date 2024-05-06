@@ -1,0 +1,64 @@
+﻿@using The_Medallion_Theater.Models;
+
+@model List<ReportVm>;
+
+@{
+    ViewData["Title"] = "MT : Reports";
+
+    var index = 0;
+    double totalRev = 0;
+}
+
+
+
+
+<div id="table-wrapper">
+    <h1 class="pl-title"><u>Total</u></h1>
+    <div id="scrollable-div">
+        <table id="custom-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Production</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Seats Sold</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            @foreach (var t in @Model)
+            {
+                <tr>
+                    @{
+                        index = index + 1;
+                    }
+                    <td> @index</td>
+                    <td>@t.PerformanceName</td>
+                    <td> @t.ProductionName</td>
+                    <td> @t.PerformanceDate.ToShortDateString()</td>
+                    <td> @t.PerformanceTime</td>
+                    <td>@t.SeatsSold
+                        <input type="text" hidden="hidden" id="fortheseats" asp-for="@t.ReservedSeat" value="@t.ReservedSeat">
+                    </td>
+                    @{
+                        totalRev = totalRev + t.TotalRevenue;
+                    }
+                    <td class="parrent"><input type="text" class="chiild" id="noborderdisplay"> </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total :  </td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+

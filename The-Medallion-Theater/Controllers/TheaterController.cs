@@ -119,15 +119,16 @@ namespace The_Medallion_Theater.Controllers
         public IActionResult AddPerformance(PerformanceVm pvm) {
 
             pvm.PerformanceID = Guid.NewGuid().ToString();
-            
+
             Performance pr = new Performance()
-                {
-                    PerformanceID = pvm.PerformanceID,
-                    PerformanceName = pvm.PerformanceName,
-                    ProductionName = pvm.ProductionName,
-                    PerformanceDate = pvm.PerformanceDate,
-                    PTime = pvm.PTime
-                };
+            {
+                PerformanceID = pvm.PerformanceID,
+                PerformanceName = pvm.PerformanceName,
+                ProductionName = pvm.ProductionName,
+                PerformanceDate = pvm.PerformanceDate,
+                PTime = pvm.PTime,
+                TotalRevenue = 0
+            };
 
                 ManageRepository.SavePerformance(pr);
                 return RedirectToAction("BrowsePerformance");
@@ -220,7 +221,8 @@ namespace The_Medallion_Theater.Controllers
         public IActionResult BookNow(BookingVm bvm)
         {
             Performance pe = ManageRepository.GetPerformanceByID(bvm.PerformanceID);
-            pe.ReservedSeats = bvm.ReservedSeats + ", " + bvm.Seats;
+            pe.ReservedSeats = bvm.Seats + ", " + bvm.ReservedSeats;
+            pe.TotalRevenue = bvm.TotalPrice + pe.TotalRevenue;
             ManageRepository.UpdatePerformance(pe);
 
             string PatronId = userManager.FindByNameAsync(User.Identity.Name).Result.Id;
@@ -247,6 +249,44 @@ namespace The_Medallion_Theater.Controllers
             Patron pa = ManageRepository.GetUserById(PatronId);
             return View(ManageRepository.ShowMyTickets(pa.Id));
         }
+        public IActionResult ShowReport()
+        {
+            List<Performance> performances = ManageRepository.GetPerformances();
+            List<ReportVm> reports = new List<ReportVm>();
+            foreach (var performance in performances)
+            {
+                int totalSeats;
+                try
+                {
+                    string[] seats = performance.ReservedSeats
+                    .Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries)
+                    .Where(s => !string.IsNullOrWhiteSpace(s))
+                    .ToArray();
+                    totalSeats = seats.Length;
+
+                }
+                catch
+                {
+                    totalSeats = 0;
+                }
+                
+                
+                
+                ReportVm report = new ReportVm()
+                {
+                    PerformanceName = performance.PerformanceName,
+                    ProductionName = performance.ProductionName,
+                    PerformanceDate = performance.PerformanceDate,
+                    PerformanceTime = performance.PTime.ToString(),
+                    ReservedSeat = performance.ReservedSeats,
+                    SeatsSold = totalSeats,                    
+                    TotalRevenue = performance.TotalRevenue
+                };
+                reports.Add(report);
+            }
+            return View(reports);
+        }
+        
 
 
 

@@ -3,9 +3,7 @@ $(document).ready(function () {
     // to calculate total price 
     var totalPrice = 0;
 
-/*    var val = "A6, G4, H12, H13, D25, D26, D27, C27, C26, C25, B25, B26, B27, A27, X11, X13, X5";*/
     var val = $('#reseatNo').val();
-    console.log(val);
     var notAvailableSeats = val.split(',').map(function (seat) {
         return seat.trim();
     });
@@ -43,8 +41,8 @@ $(document).ready(function () {
             }
         }
         // Updating the "Seats" input value with the selected seats
-        $('#seatNo').val(selectedSeats.join(', '));
-    });
+        $('#seatNo').val(selectedSeats.join(', ')); 
+        });
 });
 
 // to show a seat is available or not 
@@ -91,6 +89,30 @@ $(document).ready(function () {
 
 });
 
+
+$(document).ready(function () {
+    var seats = $('#fortheseats').val();    
+    console.log(seats);
+    var soldseats = seats.split(',').map(function (seat) {
+        return seat.trim();
+    });
+    var totalrevenue = 0;
+    if (seats.trim() !== '') {
+        soldseats.forEach(function (seat) {
+            var price = GetPrice(seat);
+            totalrevenue += price;
+        });
+    }
+    $('#noborderdisplay').val(seats.trim() === '' ? 0 : totalrevenue);
+    console.log($('#noborderdisplay').val());
+});
+
+$(document).ready(function () {
+    $('.chiild').each(function () {
+        var parentBackgroundColor = $(this).parent('.parrent').css('background-color');
+        $(this).css('background-color', parentBackgroundColor);
+        });
+});
 
 function GetPrice(seat_text) {
     var firstLetter = seat_text.charAt(0);

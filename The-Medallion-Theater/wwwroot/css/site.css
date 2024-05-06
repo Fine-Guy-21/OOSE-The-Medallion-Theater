@@ -168,3 +168,8 @@ input.form-control:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+#noborderdisplay {
+    border: none;
+    outline: none;    
+}
